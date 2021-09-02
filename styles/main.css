@@ -182,3 +182,81 @@ video {
   transform: translateY(-170px) ;
 
 }
+
+
+form#contact {
+
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+form#contact textarea {
+  font-size: 1.1rem;
+  padding: 8px;
+  
+  border: 1px solid #ccc ;
+}
+
+form#contact select {
+  font-size: 1rem;
+  width: 150px;
+}
+
+form#contact input {
+  font-size: 1.2rem;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc ;
+}
+
+
+form#contact th { 
+  
+  text-align: right;
+  color: #333; 
+  max-width: 300px;
+  font-weight: 400;
+  
+}
+
+
+
+
+
+form#contact td { padding: 16px;  }
+
+
+form#contact thead td { 
+  font-style: italic;
+  padding-bottom: 45px;
+  text-align: center;
+}
+
+form#contact select,
+form#contact textarea { margin-top: -16px }
+
+form#contact button {
+  font-size: 1rem;
+  padding: 10px 15px;
+  width: 100%;  
+}
+
+form#contact button:hover {
+  cursor: pointer;
+}
+
+tbody > tr:first-child > th {
+  display: flex;
+}
+
+form#contact tfoot {
+  text-align: center;
+}
+
+form#contact tfoot td {
+  padding-top: 35px;
+}
+
