@@ -8,17 +8,20 @@
   --white: #fff;
   --colorPrimary: #483C67;
   --colorSecundary: rgb(26, 18, 59);
+  --colorTertiary: rgb(88, 68, 167);
   --colorDetails: #E96379;
-  --colorNac: #666
+  --colorNac: #666;
+  --colorFocus: rgb(245, 147, 36);
+  --colorShadow: rgba(6, 6, 6, 0.1)
 }
 
 body {
-  font-size: 1rem;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: 'Roboto', sans-serif;
+  font:400 16px 'Roboto', sans-serif;
 }
 
 a {
@@ -32,9 +35,42 @@ a:focus {
   text-decoration: none;
 }
 
+
 article {
   padding-right: 40px;
 }
+
+article a img { 
+  width: 150px;
+  transform: translate(-10px, -15px);
+}
+
+article a { 
+  background-color: var(--white);
+  color: var(--colorPrimary);
+}
+
+
+article a.githubpages {
+  
+  align-items: center;
+  background-color: var(--colorPrimary);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  color: var(--white);
+  text-decoration: none;
+  display: flex;
+  height: 110px;
+  width: 510px;
+  text-indent: 25px;
+  margin: 50px 0 30px;
+  transition: background-color ease-in-out .2s;
+}
+
+article a.githubpages:hover {
+  background-color: var(--colorTertiary);
+}
+
 
 article h1 {
   margin-bottom: 28px;
@@ -44,6 +80,8 @@ article p {
   line-height: 28px;
   margin-bottom: 28px;
 }
+
+
 
 aside {
   padding-top: 2px;
@@ -85,10 +123,11 @@ header div a:hover {
 }
 
 header .logo {
-  width: 150px;
   height: 150px;
   transform: translate(75px, 24px);
+  width: 150px;
 }
+
 
 header p {
   font-size: 5rem;
@@ -130,6 +169,7 @@ header nav a {
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
+  transition: background-color ease-in-out .277s;
   
 }
 
@@ -170,9 +210,10 @@ footer > * ~ * {
 
 div.video {
   
-  max-width:100%;
+  max-width: 100%;
   height: 140px;
   overflow: hidden;
+  
 
 }
 
@@ -186,77 +227,144 @@ video {
 
 form#contact {
 
+  border-right: 1px solid rgba(133, 133, 133, .4);
   display: flex;
   flex-direction: column;
+  padding: 0 120px 40px 0;
+
   
 }
-
-
-
-form#contact textarea {
-  font-size: 1.1rem;
-  padding: 8px;
-  
-  border: 1px solid #ccc ;
-}
-
-form#contact select {
-  font-size: 1rem;
-  width: 150px;
-}
-
-form#contact input {
-  font-size: 1.2rem;
-  padding: 8px;
-  border: none;
-  border-bottom: 1px solid #ccc ;
-}
-
-
-form#contact th { 
-  
-  text-align: right;
-  color: #333; 
-  max-width: 300px;
-  font-weight: 400;
-  
-}
-
-
-
-
-
-form#contact td { padding: 16px;  }
-
-
-form#contact thead td { 
-  font-style: italic;
-  padding-bottom: 45px;
-  text-align: center;
-}
-
-form#contact select,
-form#contact textarea { margin-top: -16px }
 
 form#contact button {
-  font-size: 1rem;
-  padding: 10px 15px;
-  width: 100%;  
+  
+  background-color: var(--colorPrimary);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.4rem;
+  margin-top: 54px;
+  padding: 20px 15px;
+  width: 100%;
+  transition: all ease-in .3s;
+
 }
 
 form#contact button:hover {
   cursor: pointer;
+  background-color: var(--colorDetails);
+  
 }
 
-tbody > tr:first-child > th {
+form#contact fieldset {
+  
   display: flex;
+  flex-direction: column; 
+  border: 0;
+  padding-top: 25px;
+  
 }
 
-form#contact tfoot {
-  text-align: center;
+form#contact fieldset:first-of-type label {
+  margin-top: 18px;
 }
 
-form#contact tfoot td {
-  padding-top: 35px;
+form#contact fieldset.technologies {
+
+  margin-top: 64px;
+  border: 1px solid #ccc;
+  padding: 0 50px 64px;
+
 }
 
+form#contact fieldset.technologies label {
+  font-size: 1.02rem;
+  text-indent: 11px;
+}
+
+form#contact fieldset.technologies legend {
+  padding: 0 15px;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+form#contact p {
+  font:800 1.4rem 'Roboto', sans-serif;
+}
+
+form#contact input {
+  border: none;
+  border-bottom: 1px solid #ccc ;
+  font-size: 1.2rem;
+  padding: 8px;
+}
+
+form#contact input[type="range"] {
+  cursor: pointer;  
+}
+
+
+form#contact select {
+  font-size: 1rem;
+  padding: 9px 9px;
+  border: 1px solid rgba(133, 133, 133, .4)
+}
+
+form#contact select option {
+  cursor: pointer;
+  padding: 3px;
+
+}
+
+form#contact textarea {
+  border: 1px solid #ccc ;
+  font-size: 1.1rem;
+  height: 120px;
+  margin-top: 13px;
+  padding: 8px;
+}
+
+form#contact textarea:focus {
+  box-shadow:  2px 2px 2px 2px var(--colorShadow);
+}
+
+
+form#contact input,
+form#contact textarea {
+  transition: border 0.8s ease;
+}
+
+form#contact input:focus {
+  border-bottom: 1px solid var(--colorFocus);
+  outline: none;
+}
+
+form#contact textarea:focus {
+  border: 1px solid var(--colorFocus);
+  outline: none;
+}
+
+form#contact label
+{
+  line-height: 28px;
+  padding: 6px 0;
+  margin-top: 40px;
+}
+
+form#contact label span[class] {
+  font-style: italic;
+}
+
+form#contact label span:not([class]) {
+  cursor: pointer;
+}
+
+form#contact label input[type="checkbox"],
+form#contact label input[type="number"]
+{
+  margin-left: 9px;
+}
+
+form#contact label input[type="number"] {
+  border: 1px solid #666;
+  max-width: 60px;
+}
