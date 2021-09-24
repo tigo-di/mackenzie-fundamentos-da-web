@@ -131,7 +131,7 @@ aside blockquote {
   background: var(--colorDetails) url(../images/bgCards.png) -20px -48px no-repeat;
   position: relative; /* dependência */
   z-index: 19;
-  transition: all ease-out .277s;
+  transition: transform ease-out .277s;
   cursor: pointer;
 }
 
@@ -316,7 +316,7 @@ footer a#whatsapp:hover {
 
 footer a#whatsapp img {
   max-width: 100%;
-  transition: ease-in all .277s;
+  transition: transform ease-in .277s;
 }
 
 footer a#whatsapp:hover img {
