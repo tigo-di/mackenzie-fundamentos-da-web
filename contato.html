@@ -7,7 +7,7 @@
         <title>Tecnologia da Informação - TI</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
@@ -35,231 +35,145 @@
         </nav>
         <div class="content">
             <form action="#" id="contact" oninput="result.value=parseInt(level.value)">
-                <table>
-                    <caption>Dúvidas? Mentorias? Estamos aqui para orientar você no mundo da TI</caption>
-                    <thead>
-                        <tr>
-                            <td colspan="4">
-                                Preencha corretamente o formulário
-                            </td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>
-                                <label for="mensagem">
-                                    Comece pelo o que importa:
-                                    <br>
-                                    Qual o motivo do seu contato?
-                                    <br>
-                                    Escreva a sua mensagem:
-                                </label>
-                            </th>
-                            <td colspan="3">
-                                <textarea
-                                    autofocus
-                                    name="mensagem"
-                                    id="mensagem"
-                                    cols="50"
-                                    rows="10"
-                                    required
-                                ></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="nome">Nome</label>
-                            </th>
-                            <td colspan="3">
-                                <input
-                                    placeholder="nome completo"
-                                    type="text"
-                                    name="nome"
-                                    id="nome"
-                                    required
-                                >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="date">Data de Nascimento</label>
-                            </th>
-                            <td colspan="3">
-                                <input
-                                    type="date"
-                                    name="date"
-                                    id="date"
-                                    required
-                                >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="email">Email</label>
-                            </th>
-                            <td colspan="3">
-                                <input
-                                    placeholder="digite o seu melhor email"
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    required
-                                >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="telefone">Telefone</label>
-                            </th>
-                            <td colspan="3">
-                                <input
-                                    placeholder="ligamos somente se necessário"
-                                    type="tel"
-                                    id="telefone"
-                                    name="telefone"
-                                    pattern="^(?:(?:\+|00)?(55)\s?)?(?:(?:\(?[1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$"
-                                    required
-                                >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="cep">CEP</label>
-                            </th>
-                            <td colspan="3">
-                                <input
-                                    type="text"
-                                    required
-                                    name="cep"
-                                    id="cep"
-                                    pattern="[0-9]{5}-?[0-9]{3}"
-                                >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">
-                                <label for="nome">
-                                    Quais dessas tecnologias
-                                    <br>
-                                    despertam o seu interesse?
-                                </label>
-                            </th>
-                            <td>
-                                Backend
-                            </td>
-                            <td>
-                                Frontend
-                            </td>
-                            <td>
-                                Mobile
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <select name="backend" id="backend" multiple>
-                                    <option value="NodeJS">NodeJS</option>
-                                    <option value="PHP">PHP</option>
-                                    <option value="Java">Java</option>
-                                    <option value="Outra" selected>Outra</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="frontend" id="frontend" multiple>
-                                    <option value="ReactJS">ReactJS</option>
-                                    <option value="Javascript">Javascript</option>
-                                    <option value="HTML & CSS">HTML & CSS</option>
-                                    <option value="Outra" selected>Outra</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="mobile" id="mobile" multiple>
-                                    <option value="React Native">React Native</option>
-                                    <option value="Swift">Swift</option>
-                                    <option value="Kotlin">Kotlin</option>
-                                    <option value="Outra" selected>Outra</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="level">
-                                    De 0 a 5,
-                                    <br>
-                                    qual o seu comprometimento
-                                    <br>
-                                    com os estudos ?
-                                </label>
-                            </th>
-                            <td colspan="3">
-                                <input
-                                    type="range"
-                                    min="0"
-                                    max="5"
-                                    value="3"
-                                    id="level"
-                                    step="1"
-                                >
-                                <datalist id="steplist">
-                                    <option>0</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </datalist>
-                                <output name="result" for="level">0</output>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="newsletter">
-                                    Receber Newsletter
-                                </label>
-                            </th>
-                            <td colspan="3">
-                                <input type="checkbox" name="newsletter" id="newsletter">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="nota">
-                                    Dê uma nota para o nosso site
-                                </label>
-                            </th>
-                            <td colspan="3">
-                                <input
-                                    id="nota"
-                                    type="number"
-                                    placeholder="Qual a nossa nota?"
-                                    step="1"
-                                    min="0"
-                                    max="10"
-                                >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="url">Informe o seu Linkedin:</label>
-                            </th>
-                            <td colspan="3">
-                                <input
-                                    type="url"
-                                    name="url"
-                                    id="url"
-                                    placeholder="https://linkedin.com"
-                                    size="30"
-                                >
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="4">
-                                <button type="submit">enviar</button>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
+                <p>Dúvidas? Mentoria? Estamos aqui para orientar você no mundo da TI</p>
+                <fieldset>
+                    <label for="mensagem">
+                        Comece pelo o que importa:
+                        <br>
+                        Qual o motivo do seu contato?
+                        <span class="action"></span>
+                    </label>
+                    <textarea
+                        autofocus
+                        name="mensagem"
+                        id="mensagem"
+                        placeholder="Escreva a sua mensagem"
+                        required
+                    ></textarea>
+                </fieldset>
+                <fieldset>
+                    <label for="nome">Nome</label>
+                    <input
+                        placeholder="nome completo"
+                        type="text"
+                        name="nome"
+                        id="nome"
+                        required
+                    >
+                    <label for="date">Data de Nascimento</label>
+                    <input
+                        type="date"
+                        name="date"
+                        id="date"
+                        required
+                    >
+                    <label for="email">Email</label>
+                    <input
+                        placeholder="digite o seu melhor email"
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                    >
+                    <label for="telefone">Telefone</label>
+                    <input
+                        placeholder="ligamos somente se necessário"
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        pattern="^(?:(?:\+|00)?(55)\s?)?(?:(?:\(?[1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$"
+                        required
+                    >
+                    <label for="cep">CEP</label>
+                    <input
+                        type="text"
+                        required
+                        name="cep"
+                        id="cep"
+                        pattern="[0-9]{5}-?[0-9]{3}"
+                    >
+                    <label for="url">Informe o seu Linkedin:</label>
+                    <input
+                        type="url"
+                        name="url"
+                        id="url"
+                        placeholder="https://linkedin.com"
+                        size="30"
+                    >
+                </fieldset>
+                <fieldset class="technologies">
+                    <legend>
+                        Quais dessas tecnologias despertam o seu interesse?
+                    </legend>
+                    <label for="backend">
+                        No Backend:
+                    </label>
+                    <select name="backend" id="backend" multiple>
+                        <option value="NodeJS">NodeJS</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Java">Java</option>
+                        <option value="Outra" selected>Outra</option>
+                    </select>
+                    <label for="frontend">
+                        No Frontend:
+                    </label>
+                    <select name="frontend" id="frontend" multiple>
+                        <option value="ReactJS">ReactJS</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="HTML & CSS">HTML & CSS</option>
+                        <option value="Outra" selected>Outra</option>
+                    </select>
+                    <label for="mobile">
+                        No Mobile:
+                    </label>
+                    <select name="mobile" id="mobile" multiple>
+                        <option value="React Native">React Native</option>
+                        <option value="Swift">Swift</option>
+                        <option value="Kotlin">Kotlin</option>
+                        <option value="Outra" selected>Outra</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="level">
+                        De 0 a 5,
+                        <br>
+                        qual o seu comprometimento com os estudos ?
+                    </label>
+                    <input
+                        type="range"
+                        min="0"
+                        max="5"
+                        value="3"
+                        id="level"
+                        step="1"
+                    >
+                    <datalist id="steplist">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </datalist>
+                    <output name="result" for="level">0</output>
+                    <label for="newsletter">
+                        <span>
+                            Receber Newsletter
+                        </span>
+                        <input type="checkbox" name="newsletter" id="newsletter">
+                    </label>
+                    <label for="nota">
+                        Dê uma nota para o nosso site
+                        <input
+                            id="nota"
+                            type="number"
+                            step="1"
+                            min="0"
+                            max="10"
+                        >
+                    </label>
+                </fieldset>
+                <button type="submit">enviar</button>
             </form>
             <aside>
                 <h2>Grupos de Vagas</h2>
