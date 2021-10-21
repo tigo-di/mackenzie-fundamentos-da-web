@@ -217,9 +217,9 @@ header div a:hover {
 }
 
 header .logo {
-  height: 150px;
+  height: 9.2rem;
   transform: translate(75px, 24px);
-  width: 150px;
+  width: 9.2rem;
 }
 
 
@@ -509,13 +509,126 @@ form#contact label input[type="number"] {
 }
 
 .ratting-x3 {
-  width: 40px
+  width: 3.60rem
 }
 
 .ratting-x4 {
   
-  width: 60px
+  width: 4.88rem
 }
 
+
+
 /*
-ratting-x3">Hype</span>*/
+  
+essa não é uma abordagem mobile first
+ 
+*/
+
+
+@media screen and (max-width: 480px) {  
+ 
+  header .logo {
+    height: 3.8rem;
+    width: 3.8rem;
+    transform: translate(15px, 24px);
+  }
+ 
+
+  header {
+    background-size: 137%;
+  }
+
+
+  div.content {
+    flex-direction: column;
+  }
+
+  aside {
+    padding: 0;
+    border-left: none;
+  }
+
+  aside h2.featured {
+    left: 0;
+  }
+
+  .content aside blockquote {
+    left: 0
+  }
+
+  #peopleTalking {
+ 
+    display: none;
+   
+  }
+
+
+  article a.githubpages {
+   width: 117%;
+   text-indent: -26px;
+   font-size: .945rem;
+   }
+
+   article a img { 
+    width: 9.7rem;
+
+  }
+
+  footer {
+    height: 10vh
+  }
+
+  footer > * { 
+    text-indent: 0;
+    padding: 10px
+  }
+
+
+  footer a#whatsapp {
+   z-index: 19;
+   width: 4.5rem;
+  }
+
+  header nav {
+   flex-direction: column;
+  }
+
+  video {
+     width: 100%; /* seria melhor vw */
+     transform: none;
+  }
+
+
+  header p {
+    font-size: 3rem;
+    line-height: 32px;
+    transform: translate(-77px, 24px);
+
+  }
+
+  header p span {
+    font-size: 2rem;
+  }
+
+  figure img {
+    max-width: 100%;
+    margin-top: 36px;
+  }
+
+  figure {
+
+    border: none
+  }
+
+  .ratting {
+
+   position: static;
+
+  }
+
+  form#contact input {
+    max-width: 70%;
+  }
+
+} 
