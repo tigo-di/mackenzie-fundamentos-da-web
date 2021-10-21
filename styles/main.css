@@ -280,26 +280,44 @@ ul {
 
 footer {
   background-color: var(--colorPrimary);
-  color: #fff;
   display: flex;
-  height: 7vh;
   justify-content: space-between;
 }
 
 footer * { 
-  color: var(--colorDetails);
-  font-size: .8rem;
+  color: #fff;
+  font-size: .9rem;
   padding-top: 14px;
 }
 
-footer > * { 
-  text-indent: 23px;
+footer p {
+  line-height: 1.1rem;
 }
 
-footer > * ~ * { 
-  background-color: #fff;
-  padding-right: 20px;
+footer p, footer cite { 
+  padding:20px;
 }
+
+footer cite { 
+  color: var(--colorDetails);
+  align-self: flex-end;
+}
+footer cite { 
+  display: flex;
+  
+  align-items: flex-end
+}
+
+footer p a { 
+  padding: 0;
+}
+
+footer p a:hover { 
+  background: none;
+}
+
+
+
 
 footer a#whatsapp {
   background: none;
@@ -576,7 +594,12 @@ essa não é uma abordagem mobile first
   }
 
   footer {
-    height: 10vh
+    flex-direction: column;
+    height: auto;
+  }
+
+  footer cite {
+    background: var(--colorSecundary);
   }
 
   footer > * { 
