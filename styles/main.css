@@ -26,6 +26,8 @@ body {
 
 }
 
+
+
 a {
   color: var(--colorPrimary);
 }
@@ -50,6 +52,27 @@ a.alert {
   z-index: 20;
 
 }
+
+
+.testEvent {
+  color: var(--colorPrimary);
+  cursor: pointer;
+  background-color: yellow;
+  border-radius: 8px;
+  display: block;
+  max-width: 62%;
+  padding: 15px 20px;
+}
+
+.testEventClickOn {
+  background-color: var(--colorSecundary);
+  color:  var(--white);
+}
+
+.testEvent a { 
+  display: inline-block;
+  padding: 1px 6px;
+  margin: 0 6px }
 
 a.alert,
 a.alert:focus {
@@ -111,6 +134,7 @@ article p {
 aside {
   padding: 2px 0 0 50px;
   border-left: 1px solid rgba(133, 133, 133, .4);
+  min-width: 350px;
 }
 
 aside ul { 
@@ -153,7 +177,7 @@ aside h2.featured {
 
   position: relative;
   left: -75px;
-  padding: 8px 12px;
+  padding: 8px 9px;
   background: var(--white);
   color:var(--colorDetails);
 
@@ -565,6 +589,7 @@ essa não é uma abordagem mobile first
   aside {
     padding: 0;
     border-left: none;
+    min-width: auto;
   }
 
   aside h2.featured {
@@ -652,6 +677,10 @@ essa não é uma abordagem mobile first
 
   form#contact input {
     max-width: 70%;
+  }
+
+  .testEvent { 
+    max-width: 500px;
   }
 
 } 
