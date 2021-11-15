@@ -62,7 +62,6 @@ function main() {
     let p = document.createElement('p');
     p.innerHTML = 'Javascript Tips: <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">addEventListener</a> é um método para detectar eventos e executar uma função como resposta.<br>Clique nesse parágrafo para disparar um evento de clique que adiciona e remove uma classe css que altera a cor da fonte e a cor do background';
     p.setAttribute('class', 'testEvent');
-    p.setAttribute('href', '#');
 
     p.addEventListener('click', () => {
       p.classList.toggle('testEventClickOn');
